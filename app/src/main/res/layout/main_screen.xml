@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background3">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:contentDescription="@string/app_name"
+                android:src="@drawable/logo" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:text="Categories:"
+            android:textColor="#5F5D5D"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alignmentMode="alignMargins"
+            android:columnCount="2"
+            android:columnOrderPreserved="false">
+
+            <ImageButton
+                android:id="@+id/parks"
+                android:layout_width="165dp"
+                android:layout_height="110dp"
+                android:layout_margin="8dp"
+                android:background="@color/transparen"
+                android:contentDescription="@string/app_name"
+                android:onClick="park"
+                android:scaleType="centerInside"
+                android:src="@drawable/park" />
+
+            <ImageButton
+                android:id="@+id/libraries"
+                android:layout_width="165dp"
+                android:layout_height="110dp"
+                android:layout_margin="8dp"
+                android:background="@color/transparen"
+                android:contentDescription="@string/app_name"
+                android:onClick="libraries"
+                android:scaleType="centerInside"
+                android:src="@drawable/library" />
+
+            <ImageButton
+                android:id="@+id/historicSites"
+                android:layout_width="165dp"
+                android:layout_height="110dp"
+                android:layout_margin="8dp"
+                android:background="@color/transparen"
+                android:contentDescription="@string/app_name"
+                android:onClick="historicSites"
+                android:scaleType="centerInside"
+                android:src="@drawable/historic" />
+
+            <ImageButton
+                android:id="@+id/hotels"
+                android:layout_width="165dp"
+                android:layout_height="110dp"
+                android:layout_margin="8dp"
+                android:background="@color/transparen"
+                android:contentDescription="@string/app_name"
+                android:onClick="hotels"
+                android:scaleType="centerInside"
+                android:src="@drawable/hotels" />
+
+            <ImageButton
+                android:id="@+id/markets"
+                android:layout_width="165dp"
+                android:layout_height="110dp"
+                android:layout_margin="8dp"
+                android:background="@color/transparen"
+                android:contentDescription="@string/app_name"
+                android:onClick="market"
+                android:scaleType="centerInside"
+                android:src="@drawable/markets" />
+
+            <ImageButton
+                android:id="@+id/worshipPlaces"
+                android:layout_width="165dp"
+                android:layout_height="110dp"
+                android:layout_margin="8dp"
+                android:background="@color/transparen"
+                android:contentDescription="@string/app_name"
+                android:onClick="worshipPlaces"
+                android:scaleType="centerInside"
+                android:src="@drawable/worship" />
+
+            <ImageButton
+                android:id="@+id/carParks"
+                android:layout_width="165dp"
+                android:layout_height="110dp"
+                android:layout_margin="8dp"
+                android:background="@color/transparen"
+                android:contentDescription="@string/app_name"
+                android:onClick="carParks"
+                android:scaleType="centerInside"
+                android:src="@drawable/car" />
+        </GridLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:text="Favorites:"
+            android:textColor="#5F5D5D"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <GridLayout
+            android:columnCount="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:columnOrderPreserved="false"
+            android:alignmentMode="alignMargins">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Place Names"
+                android:textSize="16sp"
+                android:layout_margin="2dp"/>
+            <GridLayout
+                android:columnCount="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="17dp"
+                android:layout_margin="5dp"
+                android:columnOrderPreserved="false"
+                android:alignmentMode="alignMargins">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star2"
+                    android:contentDescription="@string/app_name"/>
+            </GridLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Place Names"
+                android:textSize="16sp"
+                android:layout_margin="2dp"/>
+            <GridLayout
+                android:columnCount="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="17dp"
+                android:layout_margin="5dp"
+                android:columnOrderPreserved="false"
+                android:alignmentMode="alignMargins">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+            </GridLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Place Names"
+                android:textSize="16sp"
+                android:layout_margin="2dp"/>
+            <GridLayout
+                android:columnCount="5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginEnd="17dp"
+                android:layout_margin="5dp"
+                android:columnOrderPreserved="false"
+                android:alignmentMode="alignMargins">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/star"
+                    android:contentDescription="@string/app_name"/>
+            </GridLayout>
+        </GridLayout>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Logout"
+            android:onClick="logout"
+            android:id="@+id/logout"/>
+    </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
